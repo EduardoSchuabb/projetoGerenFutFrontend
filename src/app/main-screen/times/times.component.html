@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row box-times-element" *ngFor="let time of times">
+                <div class="col-md-4">
+                    <img
+                    src="{{time.imgSrc}}"
+                    alt="{{time.nome}}" class="img-responsive center-block" 
+                    style="max-height: 100px; margin-top: 10px;"> 
+                </div>
+                <div class="col-md-4 ">
+                    <h4><b> {{time.nome}} </b></h4>
+                    <p>Estado: {{time.estado}}</p>
+                    <p>Quant. Jogadores: {{time.quantJogadores}}</p>
+                    <p>Sigla: {{time.sigla}}</p>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn-time"><b> Pagina do time </b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

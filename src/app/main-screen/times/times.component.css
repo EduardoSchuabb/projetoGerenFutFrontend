@@ -1,0 +1,19 @@
+.box-times-element {
+
+    height: 130px;
+    width: 45%;
+    margin: 0 auto;
+    background-color: lightgrey;
+    margin-bottom: 8px;
+
+}
+
+.btn-time {
+
+    height: 55px;
+    color: white;
+    background-color: #3480eb;
+    margin-top: 40px;
+    margin-left: 10px;
+
+}
