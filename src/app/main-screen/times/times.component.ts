@@ -1,37 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TimesDTO, RespostaTimesDTO } from 'src/app/models/times-dto';
+
+import { TimesService } from './times.service';
 
 @Component({
   selector: 'app-times',
   templateUrl: './times.component.html',
   styleUrls: ['./times.component.css']
 })
-export class TimesComponent {
+export class TimesComponent implements OnInit {
   
-  times: any [];
+  times: TimesDTO[];
 
-  constructor(){ 
-    this.times = new Array();
-    let time = {
-      imgSrc: 'https://apifutebol.s3.sa-east-1.amazonaws.com/escudos/5f999ccc90039.svg',
-      nome: 'Palmeiras',
-      estado: 'SP',
-      quantJogadores: '20',
-      sigla: 'PAL'
-    }
-    let time2 = {
-      imgSrc: 'https://apifutebol.s3.sa-east-1.amazonaws.com/escudos/5f999c95084cb.svg',
-      nome: 'Flamengo',
-      estado: 'RJ',
-      quantJogadores: '20',
-      sigla: 'FLA'
-    }
+  constructor(private timesService: TimesService){ 
 
-    this.times.push(time);
-    this.times.push(time2);
   }
 
-  ngOnInit(){ }
+  ngOnInit(){ 
+
+    this.onBuscarTimes();
+
+  }
+
+  onBuscarTimes(){
+
+    this.timesService.buscarTimes()
+    .subscribe( times => {
+      this.times = times.timesDTO;
+    });
+
+  }
 
 
-    
+
 }

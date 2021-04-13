@@ -1,15 +1,14 @@
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-inverse">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#"> Projeto Futebol</a>
+            <a class="navbar-brand" routerLink="/"> Projeto Futebol</a>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Times</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Tabela</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Analise de dados</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                <li class="nav-item"><a routerLink="/times">Times</a></li>
+                <li class="nav-item"><a routerLink="/tabela">Tabela</a></li>
+                <li class="nav-item"><a routerLink="/">Analise de dados</a></li>
+                <li class="nav-item"><a routerLink="/">Sobre</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" style="margin-top: 5px; margin-right: 1px;">
                 <form class="form-inline my-2 my-lg-0">
@@ -23,4 +22,4 @@
     </nav>
 </div>
 
-<app-times></app-times>
+<router-outlet></router-outlet>
